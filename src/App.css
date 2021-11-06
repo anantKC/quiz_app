@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+body
+{
+  /* background: linear-gradient(to right,rgb(130, 199, 222),cyan,rgb(93, 93, 191)); */
+  background-image: url('https://wallpapercave.com/wp/wp4924046.jpg');
+  background-size: cover;
+  font-size: 8px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  
+}
+.main
+{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app
+{
+
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+  width: 50rem;
+  height: 25rem;
+  border: 0.1rem solid rgb(29, 29, 87);
+  border-radius: 0.3rem;
+  min-height: 200px;
+  color: white;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.score-section
+
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  animation-name: score;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+.question-section
+{
+width: 100%;
+position: relative;
+padding: 0.5rem 2rem;
+
+}
+.question-count
+{
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin: 0.5rem 0;
+}
+.question-count span{
+  font-size: 2rem;
+}
+.question-text
+{
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 5px solid #234668;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.correct {
+  background-color: #2f922f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+@keyframes score {
+
+  100%
+  {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+.nav
+{
+  font-size: 1rem;
 }
